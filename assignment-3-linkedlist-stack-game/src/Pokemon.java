@@ -12,6 +12,7 @@ public class Pokemon {
     private int speed;
     private int generation;
     private boolean isLegendary;
+
     public Pokemon(int indexNumber, String name, String typeOne, String typeTwo, int total, int hp, int attack,
                    int defense, int attackSpeed, int defenceSpeed, int speed, int generation, boolean isLegendary) {
         this.indexNumber = indexNumber;

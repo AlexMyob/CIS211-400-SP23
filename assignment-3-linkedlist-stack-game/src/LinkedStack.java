@@ -5,6 +5,7 @@ https://visualgo.net/en/list
  */
 public class LinkedStack<T> implements Stack<T> {
     private Node<T> head = null;
+
     @Override
     public void push(T item) throws IllegalStateException {
         if (head == null) {
@@ -12,12 +13,12 @@ public class LinkedStack<T> implements Stack<T> {
             // linked list is empty
             // special case
             head = new Node(item, null);
-        }
-        else {
+        } else {
             Node<T> newNode = new Node<T>(item, head);
             head = newNode;
         }
     }
+
     @Override
     public T pop() {
         if (head == null) {
@@ -29,23 +30,25 @@ public class LinkedStack<T> implements Stack<T> {
             return returnValue;
         }
     }
+
     @Override
     public T peek() {
-        if (head==null) {
+        if (head == null) {
             throw new EmptyStackException();
-        }
-        else {
+        } else {
             return head.data;
         }
     }
+
     @Override
     public boolean isEmpty() {
         if (head == null) {
             return true;
-        } else{
+        } else {
             return false;
         }
     }
+
     @Override
     public int length() {
         Node<T> n = head;
