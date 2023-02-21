@@ -59,4 +59,16 @@ public class LinkedStack<T> implements Stack<T> {
         }
         return length;
     }
+    public String toString() {
+        String result = "";
+        Node current = head;
+        while(current.getNext() != null) {
+            result += current.getData();
+            if (current.getNext() != null) {
+                result += ", ";
+            }
+            current = current.getNext();
+        }
+        return result;
+    }
 }

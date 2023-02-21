@@ -49,5 +49,4 @@ public interface Stack<T> {
      * @return number of entries.
      */
     public int length();
-
 }
